@@ -1,4 +1,4 @@
-update=Mon 12 Dec 2016 02:32:28 PM PST
+update=Mon 12 Dec 2016 04:26:11 PM PST
 version=1
 last_client=kicad
 [cvpcb]
@@ -44,6 +44,8 @@ SolderMaskMinWidth=0
 DrawSegmentWidth=0.127
 BoardOutlineThickness=0.127
 ModuleOutlineThickness=0.127
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=
@@ -78,5 +80,5 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=kicad-ESP8266/ESP8266
-[general]
-version=1
+LibName31=kicad-rockingdlabs/rockingdlabs
+LibName32=switches
