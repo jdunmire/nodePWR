@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name Buttons_Switches_SMD)(type Github)(uri "$(KIGITHUB)/Buttons_Switches_SMD.pretty")(options "")(descr ""))
+)
