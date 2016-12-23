@@ -1,4 +1,4 @@
-update=Mon 12 Dec 2016 04:26:11 PM PST
+update=Fri 16 Dec 2016 02:43:10 PM PST
 version=1
 last_client=kicad
 [cvpcb]
@@ -11,19 +11,6 @@ LibDir=
 NetType=0
 [cvpcb/libraries]
 EquName1=devcms
-[schematic_editor]
-version=1
-PageLayoutDescrFile=rockingdlabs_letter_with_logo.kicad_wks
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
 [pcbnew]
 version=1
 PageLayoutDescrFile=rockingdlabs_letter_with_logo.kicad_wks
@@ -82,3 +69,13 @@ LibName29=valves
 LibName30=kicad-ESP8266/ESP8266
 LibName31=kicad-rockingdlabs/rockingdlabs
 LibName32=switches
+[schematic_editor]
+version=1
+PageLayoutDescrFile=rockingdlabs_letter_with_logo.kicad_wks
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=60
+ERC_TestSimilarLabels=1
