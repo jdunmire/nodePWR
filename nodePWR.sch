@@ -47,17 +47,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L CONN_01X06 P3
-U 1 1 584F4021
-P 2200 6950
-F 0 "P3" H 2278 6991 50  0000 L CNN
-F 1 "Node" H 2278 6900 50  0000 L CNN
-F 2 "rockingdlabs:FPC_conn-6_8x4.9mm_Pitch0.5mm" H 2200 6950 50  0001 C CNN
-F 3 "" H 2200 6950 50  0000 C CNN
-	1    2200 6950
-	-1   0    0    -1  
-$EndComp
-$Comp
 L CONN_01X05 P2
 U 1 1 584F40C9
 P 1500 1900
@@ -151,7 +140,9 @@ $EndComp
 Wire Wire Line
 	1700 1100 2100 1100
 Wire Wire Line
-	2100 950  2100 1700
+	2100 950  2100 1100
+Wire Wire Line
+	2100 1100 2100 1700
 Wire Wire Line
 	2100 1700 1700 1700
 Connection ~ 2100 1100
@@ -167,28 +158,6 @@ F 1 "bq25070" H 5050 4415 50  0000 C CNN
 F 2 "rockingdlabs:bq25070_DQC_10-DQC10_P84X2P4" H 5050 3850 50  0001 C CNN
 F 3 "LiFePO4 Charger" H 5050 4324 50  0000 C CNN
 	1    5050 3850
-	1    0    0    -1  
-$EndComp
-$Comp
-L LED_Small D1
-U 1 1 584F4F64
-P 6050 3100
-F 0 "D1" V 6096 3032 50  0000 R CNN
-F 1 "Charging" V 6005 3032 50  0000 R CNN
-F 2 "LEDs:LED_0603" V 6050 3100 50  0001 C CNN
-F 3 "" V 6050 3100 50  0000 C CNN
-	1    6050 3100
-	0    -1   -1   0   
-$EndComp
-$Comp
-L R R3
-U 1 1 584F5004
-P 6050 2750
-F 0 "R3" H 6120 2796 50  0000 L CNN
-F 1 "75" H 6120 2705 50  0000 L CNN
-F 2 "Resistors_SMD:R_0603" V 5980 2750 50  0001 C CNN
-F 3 "" H 6050 2750 50  0000 C CNN
-	1    6050 2750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -208,9 +177,9 @@ Wire Wire Line
 Wire Wire Line
 	2400 6800 5100 6800
 Wire Wire Line
-	2400 7000 3850 7000
+	2400 6900 3850 6900
 Wire Wire Line
-	3850 7000 3850 6050
+	3850 6900 3850 6050
 Wire Wire Line
 	3850 6050 4000 6050
 $Comp
@@ -225,14 +194,14 @@ F 3 "" H 2650 7400 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2400 6900 5100 6900
+	2400 7200 2650 7200
 Wire Wire Line
-	2400 7100 5100 7100
+	2650 7200 5100 7200
 Wire Wire Line
-	2650 7100 2650 7400
+	2650 7200 2650 7400
 Wire Wire Line
-	2400 7200 3150 7200
-Connection ~ 2650 7100
+	2400 7300 3150 7300
+Connection ~ 2650 7200
 NoConn ~ 5100 7000
 $Comp
 L +BATT #PWR06
@@ -246,7 +215,7 @@ F 3 "" H 3150 6300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3150 7200 3150 6300
+	3150 7300 3150 6300
 $Comp
 L CONN_01X06 P4
 U 1 1 584F586B
@@ -263,8 +232,6 @@ TXD
 Text Label 2550 6800 0    60   ~ 0
 RXD
 Text Label 2550 6900 0    60   ~ 0
-VCC
-Text Label 2550 7000 0    60   ~ 0
 PGM
 NoConn ~ 5100 6600
 Wire Wire Line
@@ -274,12 +241,12 @@ Wire Wire Line
 $Comp
 L +3V3 #PWR07
 U 1 1 584F5E3F
-P 6350 2400
-F 0 "#PWR07" H 6350 2250 50  0001 C CNN
-F 1 "+3V3" H 6365 2573 50  0000 C CNN
-F 2 "" H 6350 2400 50  0000 C CNN
-F 3 "" H 6350 2400 50  0000 C CNN
-	1    6350 2400
+P 7100 2450
+F 0 "#PWR07" H 7100 2300 50  0001 C CNN
+F 1 "+3V3" H 7115 2623 50  0000 C CNN
+F 2 "" H 7100 2450 50  0000 C CNN
+F 3 "" H 7100 2450 50  0000 C CNN
+	1    7100 2450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -296,21 +263,22 @@ $EndComp
 Wire Wire Line
 	4950 4600 4950 4550
 Wire Wire Line
-	3150 4600 5150 4600
+	3150 4600 3600 4600
+Wire Wire Line
+	3600 4600 4000 4600
+Wire Wire Line
+	4000 4600 4950 4600
+Wire Wire Line
+	4950 4600 5050 4600
+Wire Wire Line
+	5050 4600 5150 4600
 Wire Wire Line
 	5150 4600 5150 4550
 Wire Wire Line
-	5050 4550 5050 4650
+	5050 4550 5050 4600
+Wire Wire Line
+	5050 4600 5050 4650
 Connection ~ 5050 4600
-Wire Wire Line
-	6050 2450 7100 2450
-Wire Wire Line
-	6050 2450 6050 2600
-Wire Wire Line
-	6050 2900 6050 3000
-Wire Wire Line
-	6350 2400 6350 2450
-Connection ~ 6350 2450
 $Comp
 L C C2
 U 1 1 584F63A5
@@ -325,11 +293,17 @@ $EndComp
 Wire Wire Line
 	5950 3650 6050 3650
 Wire Wire Line
-	6050 3650 6050 3200
+	5950 3750 6050 3750
 Wire Wire Line
-	5950 3750 8750 3750
+	6050 3750 7900 3750
 Wire Wire Line
-	6050 3750 6050 4100
+	7900 3750 8350 3750
+Wire Wire Line
+	8350 3750 8750 3750
+Wire Wire Line
+	6050 3750 6050 3850
+Wire Wire Line
+	6050 3850 6050 4100
 Wire Wire Line
 	5950 3850 6050 3850
 Connection ~ 6050 3850
@@ -359,7 +333,9 @@ F 3 "" H 6050 4550 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7900 4200 7900 4350
+	7900 4200 7900 4250
+Wire Wire Line
+	7900 4250 7900 4350
 Wire Wire Line
 	6050 4400 6050 4550
 $Comp
@@ -398,7 +374,9 @@ $EndComp
 Wire Wire Line
 	7100 2450 7100 2600
 Wire Wire Line
-	7100 2900 7100 3100
+	7100 2900 7100 3000
+Wire Wire Line
+	7100 3000 7100 3100
 Wire Wire Line
 	7100 3400 7100 3500
 Wire Wire Line
@@ -433,7 +411,9 @@ F 3 "" H 2850 3400 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2850 3650 4150 3650
+	2850 3650 3150 3650
+Wire Wire Line
+	3150 3650 4150 3650
 $Comp
 L R R1
 U 1 1 584F6BC1
@@ -461,7 +441,9 @@ Wire Wire Line
 Wire Wire Line
 	4000 3850 4000 4050
 Wire Wire Line
-	4150 3750 3600 3750
+	3350 3750 3600 3750
+Wire Wire Line
+	3600 3750 4150 3750
 Wire Wire Line
 	3600 3750 3600 4050
 Wire Wire Line
@@ -522,4 +504,31 @@ Wire Wire Line
 Wire Wire Line
 	8450 4250 8450 4150
 Connection ~ 7900 4250
+$Comp
+L CONN_01X07 P3
+U 1 1 58641C15
+P 2200 7000
+F 0 "P3" H 2278 7041 50  0000 L CNN
+F 1 "Node" H 2278 6950 50  0000 L CNN
+F 2 "" H 2200 7000 50  0000 C CNN
+F 3 "" H 2200 7000 50  0000 C CNN
+	1    2200 7000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 7200 5100 7100
+NoConn ~ 5100 6900
+Wire Wire Line
+	2400 7000 2900 7000
+Wire Wire Line
+	2400 7100 2900 7100
+Text Label 2550 7000 0    60   ~ 0
+CTRL
+Text Label 2550 7100 0    60   ~ 0
+CHRG
+Connection ~ 3600 3750
+Text Label 3350 3750 0    60   ~ 0
+CTRL
+Text Label 6000 3650 0    60   ~ 0
+CHRG
 $EndSCHEMATC
